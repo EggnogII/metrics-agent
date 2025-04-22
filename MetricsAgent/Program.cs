@@ -5,6 +5,14 @@ class MetricsAgent
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        // Create an instance of the Metric class
+        Metric metric = new Metric();
+
+        // Display the metrics
+        Console.WriteLine($"Host Name: {metric.HostName}");
+        Console.WriteLine($"Processor Count: {metric.ProcessorCount}");
+        Console.WriteLine($"OS Version: {metric.OSVersion}");
+        Console.WriteLine($"Total Physical Memory: {metric.TotalPhysicalMemory / (1024 * 1024)} MB");
+        Console.WriteLine($"Available Physical Memory: {metric.AvailablePhysicalMemory / (1024 * 1024)} MB");
     }
 }
