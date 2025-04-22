@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="ComputerInfo" Version="0.2.0" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="9.0.4" />
     <PackageReference Include="System.Management" Version="9.0.4" />
   </ItemGroup>
 
