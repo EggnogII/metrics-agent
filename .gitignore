@@ -1,1 +1,3 @@
 MetricsAgent/bin/*
+MetricsAgent/obj/*
+MetricsAgent/obj/Debug/net9.0/*
