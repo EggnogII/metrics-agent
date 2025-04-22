@@ -14,5 +14,8 @@ class MetricsAgent
         Console.WriteLine($"OS Version: {metric.OSVersion}");
         Console.WriteLine($"Total Physical Memory: {metric.TotalPhysicalMemory / (1024 * 1024)} MB");
         Console.WriteLine($"Available Physical Memory: {metric.AvailablePhysicalMemory / (1024 * 1024)} MB");
+        Console.WriteLine($"CPU Load: {metric.CPULoad} %");
+
+        // We basically want to take the information from Metric, JSONIFY it and send it to an external API service.
     }
 }
