@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetricsAgent", "MetricsAgent.csproj", "{97D91333-A7DA-3D13-7F1C-C314CC621800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97D91333-A7DA-3D13-7F1C-C314CC621800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D91333-A7DA-3D13-7F1C-C314CC621800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D91333-A7DA-3D13-7F1C-C314CC621800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D91333-A7DA-3D13-7F1C-C314CC621800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34563B5B-5620-4FDF-AEB2-EB024DD75021}
+	EndGlobalSection
+EndGlobal

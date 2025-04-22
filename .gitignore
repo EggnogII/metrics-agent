@@ -1,0 +1,14 @@
+MetricsAgent/bin/*
+MetricsAgent/obj/*
+MetricsAgent/obj/Debug/net9.0/*
+MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfo.cs
+MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfoInputs.cache
+MetricsAgent/obj/MetricsAgent.csproj.nuget.dgspec.json
+MetricsAgent/obj/MetricsAgent.csproj.nuget.dgspec.json
+MetricsAgent/obj/project.nuget.cache
+MetricsAgent/obj/MetricsAgent.csproj.nuget.dgspec.json
+MetricsAgent/obj/project.assets.json
+MetricsAgent/obj/project.nuget.cache
+MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfo.cs
+MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfoInputs.cache
+MetricsAgent/obj/Debug/net9.0/MetricsAgent.assets.cache
