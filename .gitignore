@@ -1,3 +1,5 @@
 MetricsAgent/bin/*
 MetricsAgent/obj/*
 MetricsAgent/obj/Debug/net9.0/*
+MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfo.cs
+MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfoInputs.cache
