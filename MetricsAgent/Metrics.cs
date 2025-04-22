@@ -7,6 +7,8 @@ class Metric{
     public string HostName { get; set; }
     public int ProcessorCount { get; set; }
     public string OSVersion { get; set; }
+    
+    public float CPULoad {get; set;}
     public long TotalPhysicalMemory { get; set; }
     public long AvailablePhysicalMemory { get; set; }
 
@@ -18,6 +20,7 @@ class Metric{
 
         // Query system memory information
         GetMemoryLoad();
+        CPULoad = GetCPULoad();
     }
 
     private void GetMemoryLoad()
@@ -28,5 +31,14 @@ class Metric{
             TotalPhysicalMemory = Convert.ToInt64(obj["TotalVisibleMemorySize"]) * 1024;
             AvailablePhysicalMemory = Convert.ToInt64(obj["FreePhysicalMemory"]) * 1024;
         }
+    }
+
+    private float GetCPULoad(){
+        var cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+        Thread.Sleep(1000); // Wait a second to get a valid reading
+        float cpuLoad = cpuCounter.NextValue();
+        Thread.Sleep(1000);
+        cpuLoad = cpuCounter.NextValue();
+        return cpuLoad;
     }
 }
