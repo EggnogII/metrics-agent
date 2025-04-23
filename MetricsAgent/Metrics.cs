@@ -32,6 +32,7 @@ class Metric{
     public float CPULoad {get; set;}
     public long TotalPhysicalMemory { get; set; }
     public long AvailablePhysicalMemory { get; set; }
+    public List<Drive> Drives { get; set; } = new List<Drive>();
 
 
     public Metric()
@@ -43,6 +44,7 @@ class Metric{
         // Query system memory information
         GetMemoryLoad();
         CPULoad = GetCPULoad();
+        Drives = GetDiskInfo();
     }
 
     private void GetMemoryLoad()
@@ -62,5 +64,17 @@ class Metric{
         Thread.Sleep(1000);
         cpuLoad = cpuCounter.NextValue();
         return cpuLoad;
+    }
+
+    private List<Drive> GetDiskInfo(){
+        DriveInfo[] allDrives = DriveInfo.GetDrives();
+        List<Drive> drives = new List<Drive>();
+        foreach (DriveInfo driveInfo in allDrives){
+            if (driveInfo.IsReady){
+                Drive drive = new Drive(driveInfo);
+                drives.Add(drive);
+            }
+        }
+        return drives;
     }
 }
