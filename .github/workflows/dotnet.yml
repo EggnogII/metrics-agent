@@ -27,7 +27,7 @@ jobs:
     - name: Build Metrics Library
       run: dotnet build Metrics --no-restore
     - name: Publish Metrics Library
-      run: dotnet nuget push "out/*.nupkg" --source "github" --api-key ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push "Metrics/bin/*/*.nupkg" --source "github" --api-key ${{ secrets.GITHUB_TOKEN }}
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
