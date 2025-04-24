@@ -20,9 +20,14 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 9.0.203
+    
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
+
+    - name: Build Metrics Library
       run: dotnet build Metrics --no-restore
+    - name: Publish Metrics Library
+      run: dotnet nuget push "out/*.nupkg" --source "github" --api-key ${{ secrets.GITHUB_TOKEN }}
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
