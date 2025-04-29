@@ -27,7 +27,7 @@ jobs:
     - name: Build Metrics Library
       run: dotnet build Metrics --no-restore
     - name: Publish Metrics Library
-      run: dotnet nuget push "Metrics/bin/*/*.nupkg" --source "github" --api-key ${{ secrets.NUGET_CRED }}
+      run: dotnet nuget push "Metrics/bin/*/*.nupkg" --source "github" --api-key ${{ secrets.NUGET_CRED }} --skip-duplicate
     
     - name: Add Source
       run: dotnet nuget add source https://nuget.pkg.github.com/EggnogII/index.json \
