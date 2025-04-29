@@ -28,6 +28,13 @@ jobs:
       run: dotnet build Metrics --no-restore
     - name: Publish Metrics Library
       run: dotnet nuget push "Metrics/bin/*/*.nupkg" --source "github" --api-key ${{ secrets.NUGET_CRED }}
+    
+    - name: Add Source
+      run: dotnet nuget add source https://nuget.pkg.github.com/EggnogII/index.json \
+       --name github \
+       --username EggnogII \
+       --password ${{ secrets.NUGET_CRED }} \
+       --store-password-in-clear-text
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
