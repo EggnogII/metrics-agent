@@ -44,3 +44,4 @@ MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfo.cs
 MetricsAgent/obj/Debug/net9.0/MetricsAgent.AssemblyInfoInputs.cache
 MetricsAgent/obj/Debug/net9.0/MetricsAgent.assets.cache
 MetricsAgent/obj/Debug/net9.0/MetricsAgent.GeneratedMSBuildEditorConfig.editorconfig
+nuget.config
